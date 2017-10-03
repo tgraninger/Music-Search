@@ -11,7 +11,7 @@ import Foundation
 struct MSLyric {
 	var lyrics: String
 	
-	init(_ xml: XMLParser) {
+	init(_ data: [String : Any]) {
 		self.lyrics = data["lyrics"] as? String ?? ""
 	}
 }

@@ -51,6 +51,7 @@ extension MSSearchViewController: UITableViewDataSource {
 		
 		let searchResult = dataStore![indexPath.row]
 		
+		cell.imageView?.image = #imageLiteral(resourceName: "music")
 		cell.imageView?.imageFromUrlString(searchResult.imageUrlString)
 		cell.textLabel?.text = "\(searchResult.trackName) - \(searchResult.albumName)"
 		cell.detailTextLabel?.text = searchResult.artistName
@@ -62,6 +63,8 @@ extension MSSearchViewController: UITableViewDataSource {
 extension MSSearchViewController: UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		
 		self.performSegue(withIdentifier: "showLyricsViewController", sender: self)
 	}
 }

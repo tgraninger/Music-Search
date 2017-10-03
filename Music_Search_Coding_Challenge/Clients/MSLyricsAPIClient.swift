@@ -26,7 +26,7 @@ class MSLyricsAPIClient {
 	class func getLyrics(songName: String, artistName: String, completionHandler: @escaping(String?)->()) {
 		let artist = artistName.replaceSpaces()
 		let song = songName.replaceSpaces()
-		let urlString = "http://lyrics.wikia.com/api.php?func=getSong&artist=\(artist)&song=\(song)&fmt=json"
+		let urlString = "http://lyrics.wikia.com/api.php?func=getSong&artist=\(artist)&song=\(song)&fmt=xml"
 		
 		Alamofire.request(urlString, method: .get).validate().responsePropertyList() { response in
 			guard let data = response.data else {
@@ -35,10 +35,10 @@ class MSLyricsAPIClient {
 			}
 			
 			let xmlData = SWXMLHash.parse(data)
-//			let lyrics = MSLyric(
+			let lyrics = xmlData["LyricsResult"]["lyrics"].element?.text
 			
 			DispatchQueue.main.async {
-				//completionHandler(value)
+				completionHandler(lyrics)
 			}
 		}
 	}

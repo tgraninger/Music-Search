@@ -20,7 +20,7 @@ struct MSSearchResult {
 	init(_ data: [String : Any]) {
 		artistName = data["artistName"] as? String ?? ""
 		trackName = data["trackName"] as? String ?? ""
-		albumName = data["albumName"] as? String ?? ""
+		albumName = data["collectionName"] as? String ?? ""
 		imageUrlString = data["artworkUrl100"] as? String ?? ""
 	}
 }

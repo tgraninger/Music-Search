@@ -49,7 +49,6 @@ class MSSearchAPIClient {
 			}
 			
 			var searchResults = [MSSearchResult]()
-			
 			for jsonObject in jsonResults {
 				let searchResult = MSSearchResult(jsonObject)
 				searchResults.append(searchResult)
