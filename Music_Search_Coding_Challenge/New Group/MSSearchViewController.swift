@@ -17,28 +17,29 @@ class MSSearchViewController: UIViewController {
 	var dataStore: [MSSearchResult]?
 	
 	//Constants
-	let cellIdentifier = "SEARCH_RESULTS_CELL"
+	let cellId = "SEARCH_RESULTS_CELL"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+		self.tableView.register(UINib(nibName: "SearchResultsTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
     }
     
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "showLyricsViewController" {
+			let selectedIndexPath = tableView.indexPathForSelectedRow!
 			let viewController = segue.destination as! MSLyricsViewController
-			viewController.selectedItem = dataStore![tableView.indexPathForSelectedRow!.row]
+			
+			viewController.selectedItem = dataStore![selectedIndexPath.row]
+			
+			self.tableView.deselectRow(at: selectedIndexPath, animated: true)
 		}
     }
 }
+
+// MARK: - Table View Data Source
 
 extension MSSearchViewController: UITableViewDataSource {
 	
@@ -47,27 +48,25 @@ extension MSSearchViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-		
+		let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SearchResultsTableViewCell
 		let searchResult = dataStore![indexPath.row]
 		
-		cell.imageView?.image = #imageLiteral(resourceName: "music")
-		cell.imageView?.imageFromUrlString(searchResult.imageUrlString)
-		cell.textLabel?.text = "\(searchResult.trackName) - \(searchResult.albumName)"
-		cell.detailTextLabel?.text = searchResult.artistName
+		cell.setCellData(searchResult)
 		
 		return cell
 	}
 }
 
+// MARK: - Table View Delegate
+
 extension MSSearchViewController: UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		tableView.deselectRow(at: indexPath, animated: true)
-		
 		self.performSegue(withIdentifier: "showLyricsViewController", sender: self)
 	}
 }
+
+// MARK: - Search Bar Delegate
 
 extension MSSearchViewController: UISearchBarDelegate {
 	
@@ -87,6 +86,8 @@ extension MSSearchViewController: UISearchBarDelegate {
 		self.view.endEditing(true)
 	}
 }
+
+// MARK: - API Client Delegate
 
 extension MSSearchViewController: MSSearchAPIClientDelegate {
 	

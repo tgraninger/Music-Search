@@ -30,6 +30,8 @@
 		CE18975E1F82EE9600C91E00 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18975D1F82EE9400C91E00 /* String.swift */; };
 		CE1897621F8403E600C91E00 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE18975F1F8403BB00C91E00 /* SWXMLHash.framework */; };
 		CE1897631F8403E600C91E00 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE18975F1F8403BB00C91E00 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE1897671F8421AF00C91E00 /* SearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1897651F8421AE00C91E00 /* SearchResultsTableViewCell.swift */; };
+		CE1897681F8421AF00C91E00 /* SearchResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1897661F8421AE00C91E00 /* SearchResultsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		CE1897591F80C91500C91E00 /* MSLyricsAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSLyricsAPIClientTests.swift; sourceTree = "<group>"; };
 		CE18975D1F82EE9400C91E00 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CE18975F1F8403BB00C91E00 /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Music_Search_Coding_Challenge/Carthage/Build/iOS/SWXMLHash.framework; sourceTree = SOURCE_ROOT; };
+		CE1897651F8421AE00C91E00 /* SearchResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewCell.swift; sourceTree = "<group>"; };
+		CE1897661F8421AE00C91E00 /* SearchResultsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,11 +132,12 @@
 		CE18970F1F7F22FE00C91E00 /* Music_Search_Coding_Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				CE1897241F7F237100C91E00 /* View Controllers */,
+				CE1897641F84219200C91E00 /* Cells */,
 				CE1897421F80551300C91E00 /* Views */,
 				CE1897371F804E8B00C91E00 /* Extensions */,
-				CE1897301F7F266C00C91E00 /* Models */,
+				CE1897241F7F237100C91E00 /* View Controllers */,
 				CE18972B1F7F25FC00C91E00 /* Clients */,
+				CE1897301F7F266C00C91E00 /* Models */,
 				CE1897481F8057DD00C91E00 /* Storyboards */,
 				CE1897471F80579F00C91E00 /* Bundle Files */,
 			);
@@ -223,6 +228,15 @@
 			path = Music_Search_Coding_ChallengeTests;
 			sourceTree = "<group>";
 		};
+		CE1897641F84219200C91E00 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE1897651F8421AE00C91E00 /* SearchResultsTableViewCell.swift */,
+				CE1897661F8421AE00C91E00 /* SearchResultsTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -310,6 +324,7 @@
 			files = (
 				CE18971B1F7F22FE00C91E00 /* LaunchScreen.storyboard in Resources */,
 				CE1897181F7F22FE00C91E00 /* Assets.xcassets in Resources */,
+				CE1897681F8421AF00C91E00 /* SearchResultsTableViewCell.xib in Resources */,
 				CE1897161F7F22FE00C91E00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1897671F8421AF00C91E00 /* SearchResultsTableViewCell.swift in Sources */,
 				CE1897231F7F236800C91E00 /* MSSearchViewController.swift in Sources */,
 				CE18972D1F7F261100C91E00 /* MSSearchAPIClient.swift in Sources */,
 				CE18975E1F82EE9600C91E00 /* String.swift in Sources */,

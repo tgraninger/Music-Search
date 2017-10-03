@@ -6,7 +6,6 @@
 //  Copyright © 2017 Thomas Graninger. All rights reserved.
 //
 
-
 import XCTest
 @testable import Music_Search_Coding_Challenge
 
@@ -25,6 +24,7 @@ class MSLyricsAPIClientTests: XCTestCase {
     func testGetLyrics() {
 /* In order to test the network request, we would want to create a dependency injection with
 	a protocol that creates the URLSession task (in this case, Data Task), a completion handler, and a mock class.
+	IDEPEM, yay!
 	
 	// These should be broken down into individual tests
 		

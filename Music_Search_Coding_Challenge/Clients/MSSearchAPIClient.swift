@@ -24,7 +24,7 @@ class MSSearchAPIClient {
 	
 	weak var delegate: MSSearchAPIClientDelegate!
 	
-	/*! Creates a networking request to iTunes API.
+	/*! Creates a networking request to iTunes API - This could be done with Alamofire, but we'll use URLSession for giggles.
 	@param term - The search criteria input from user.
 	*/
 	func searchAPI(_ term: String) {
@@ -34,7 +34,6 @@ class MSSearchAPIClient {
 		
 		URLSession.shared.dataTask(with: url) { (data, response, error) in
 			guard error == nil else {
-				self.delegate.error(error!.localizedDescription)
 				return
 			}
 			
