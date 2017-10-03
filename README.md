@@ -3,7 +3,7 @@
 iTunes Music Search application.
 
 Environment:
-Xcode, Swift 3, Carthage, Alamofire, Alamofire Image, URLSession, SWXMLHash, REST, SOAP, Protocols, Callbacks.
+- Xcode, Swift 3, Carthage, Alamofire, Alamofire Image, URLSession, SWXMLHash, REST, SOAP, Protocols, Callbacks.
 
 Completed:
 - Extend UIImageView to asyncronously download image using AlamofireImage.
