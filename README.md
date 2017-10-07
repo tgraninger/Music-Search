@@ -15,6 +15,3 @@ Potential features:
 - Generic types and protocols for a more reusable networking request.
 - UI vanity.
 
-
-![simulator screen shot - iphone 8 plus - 2017-10-06 at 20 31 58](https://user-images.githubusercontent.com/9935994/31303109-e4a7406a-aad5-11e7-8938-2883a337da41.png) 
-![simulator screen shot - iphone 8 plus - 2017-10-06 at 20 32 12](https://user-images.githubusercontent.com/9935994/31303108-e4a46e62-aad5-11e7-8517-14fb214f654c.png)
