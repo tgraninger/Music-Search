@@ -12,6 +12,7 @@ Completed:
 
 
 Potential features:
-- PromiseKit, Core Animation, Data Persistence (Add to Favorites).
+- Generic types and protocols for a more reusable networking request.
+- UI vanity.
 
 
