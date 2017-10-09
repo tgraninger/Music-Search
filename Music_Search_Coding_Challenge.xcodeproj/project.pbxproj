@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0A23A41F84588D00213ABD /* SearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1897651F8421AE00C91E00 /* SearchResultsTableViewCell.swift */; };
+		CE0E6B521F88577900F56DFB /* MSSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1897221F7F236800C91E00 /* MSSearchViewController.swift */; };
 		CE1897111F7F22FE00C91E00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1897101F7F22FE00C91E00 /* AppDelegate.swift */; };
 		CE1897161F7F22FE00C91E00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1897141F7F22FE00C91E00 /* Main.storyboard */; };
 		CE1897181F7F22FE00C91E00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1897171F7F22FE00C91E00 /* Assets.xcassets */; };
 		CE18971B1F7F22FE00C91E00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1897191F7F22FE00C91E00 /* LaunchScreen.storyboard */; };
-		CE1897231F7F236800C91E00 /* MSSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1897221F7F236800C91E00 /* MSSearchViewController.swift */; };
 		CE1897261F7F23C000C91E00 /* MSLyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1897251F7F23C000C91E00 /* MSLyricsViewController.swift */; };
 		CE18972D1F7F261100C91E00 /* MSSearchAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18972C1F7F261100C91E00 /* MSSearchAPIClient.swift */; };
 		CE18972F1F7F262F00C91E00 /* MSLyricsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18972E1F7F262F00C91E00 /* MSLyricsAPIClient.swift */; };
@@ -30,7 +31,6 @@
 		CE18975E1F82EE9600C91E00 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18975D1F82EE9400C91E00 /* String.swift */; };
 		CE1897621F8403E600C91E00 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE18975F1F8403BB00C91E00 /* SWXMLHash.framework */; };
 		CE1897631F8403E600C91E00 /* SWXMLHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE18975F1F8403BB00C91E00 /* SWXMLHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE1897671F8421AF00C91E00 /* SearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1897651F8421AE00C91E00 /* SearchResultsTableViewCell.swift */; };
 		CE1897681F8421AF00C91E00 /* SearchResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1897661F8421AE00C91E00 /* SearchResultsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +67,7 @@
 		CE1897171F7F22FE00C91E00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE18971A1F7F22FE00C91E00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE18971C1F7F22FE00C91E00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE1897221F7F236800C91E00 /* MSSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSSearchViewController.swift; sourceTree = "<group>"; };
+		CE1897221F7F236800C91E00 /* MSSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MSSearchViewController.swift; path = "Music_Search_Coding_Challenge/View Controllers/MSSearchViewController.swift"; sourceTree = SOURCE_ROOT; };
 		CE1897251F7F23C000C91E00 /* MSLyricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MSLyricsViewController.swift; path = "Music_Search_Coding_Challenge/View Controllers/MSLyricsViewController.swift"; sourceTree = SOURCE_ROOT; };
 		CE18972C1F7F261100C91E00 /* MSSearchAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSSearchAPIClient.swift; sourceTree = "<group>"; };
 		CE18972E1F7F262F00C91E00 /* MSLyricsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSLyricsAPIClient.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		CE1897591F80C91500C91E00 /* MSLyricsAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSLyricsAPIClientTests.swift; sourceTree = "<group>"; };
 		CE18975D1F82EE9400C91E00 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CE18975F1F8403BB00C91E00 /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Music_Search_Coding_Challenge/Carthage/Build/iOS/SWXMLHash.framework; sourceTree = SOURCE_ROOT; };
-		CE1897651F8421AE00C91E00 /* SearchResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewCell.swift; sourceTree = "<group>"; };
+		CE1897651F8421AE00C91E00 /* SearchResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResultsTableViewCell.swift; path = Music_Search_Coding_Challenge/Cells/SearchResultsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		CE1897661F8421AE00C91E00 /* SearchResultsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -343,8 +343,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1897671F8421AF00C91E00 /* SearchResultsTableViewCell.swift in Sources */,
-				CE1897231F7F236800C91E00 /* MSSearchViewController.swift in Sources */,
+				CE0E6B521F88577900F56DFB /* MSSearchViewController.swift in Sources */,
+				CE0A23A41F84588D00213ABD /* SearchResultsTableViewCell.swift in Sources */,
 				CE18972D1F7F261100C91E00 /* MSSearchAPIClient.swift in Sources */,
 				CE18975E1F82EE9600C91E00 /* String.swift in Sources */,
 				CE1897461F8055E700C91E00 /* AlertView.swift in Sources */,

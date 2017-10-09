@@ -22,6 +22,8 @@ class MSSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		self.tableView.tableFooterView = UIView(frame: .zero)
+		self.tableView.rowHeight = UITableViewAutomaticDimension
 		self.tableView.register(UINib(nibName: "SearchResultsTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
     }
     
@@ -64,6 +66,10 @@ extension MSSearchViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		self.performSegue(withIdentifier: "showLyricsViewController", sender: self)
 	}
+	
+	func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 60.0
+	}
 }
 
 // MARK: - Search Bar Delegate
@@ -84,6 +90,11 @@ extension MSSearchViewController: UISearchBarDelegate {
 	
 	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 		self.view.endEditing(true)
+	}
+	
+	func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+		self.dataStore = nil
+		self.tableView.reloadData()
 	}
 }
 
