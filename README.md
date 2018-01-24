@@ -8,10 +8,11 @@ Environment:
 Completed:
 - Extend UIImageView to asyncronously download image using AlamofireImage.
 - Creates a get request and uses Alamofire to Fetch search results from iTunes search API on background thread, parses json, displays results in UITableView.
-- Fetches lyrics from wikia, parses XML using SWXMLHash, updates UI.
+- Fetches lyrics from wikia and parses XML using SWXMLHash (invalid json).
 
 
 Potential features:
-- Generic types and protocols for a more reusable networking request.
-- UI vanity.
+- Refactor networking service to a protocol-oriented design pattern.
+- Unit Tests.
+- UI needs some TLC.
 
