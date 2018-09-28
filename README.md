@@ -3,7 +3,7 @@
 iTunes Music Search application.
 
 Environment:
-- Xcode, Swift 3, Carthage, Alamofire, Alamofire Image, URLSession, SWXMLHash, REST, SOAP, Protocols, Callbacks.
+- Xcode, Swift 3, Carthage, Alamofire, Alamofire Image, URLSession, SWXMLHash, REST, SOAP.
 
 Features:
 - Asynchronously fetches json data from iTunes music search API, models data, populates results in a table view. 
